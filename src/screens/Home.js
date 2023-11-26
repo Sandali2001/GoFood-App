@@ -51,7 +51,7 @@ export default function Home() {
           </div>
           <div className="carousel-item active">
             <img
-              src="https://source.unsplash.com/random/900×900/?fruit"
+              src="https://source.unsplash.com/random/900×900/?donut"
               className="d-block w-100"
               alt="..."
               style={{ filter: "brightness(30%)" }}
@@ -126,9 +126,8 @@ export default function Home() {
                               className="col-12 col-md-6 col-lg-3"
                             >
                               <Cards
-                                foodName={filterItems.name}
+                                foodItem={filterItems}
                                 options={filterItems.options[0]}
-                                imgSrc={filterItems.img}
                               />
                             </div>
                           );
