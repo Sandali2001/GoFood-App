@@ -12,7 +12,7 @@ router.post(
   [
     body("email").isEmail(),
     body("name").isLength({ min: 5 }),
-    body("password").isLength({ min: 5 }),
+    body("password", "Incorrect Password").isLength({ min: 5 }),
   ],
 
   async (req, res) => {
@@ -29,8 +29,7 @@ router.post(
         password: secPassword,
         email: req.body.email,
         location: req.body.location,
-      });
-      res.json({ success: true });
+      }).then(res.json({ success: true }));
     } catch (error) {
       console.log(error);
       res.json({ success: false });

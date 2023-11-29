@@ -26,7 +26,7 @@ async function fetchData() {
     global.foodCategory = catData;
     //console.log(global.sample);
     // console.log(global.foodCategory);
-    mongoose.connection.close();
+    //mongoose.connection.close();
   } catch (error) {
     console.log("err:", error);
     process.exit();
